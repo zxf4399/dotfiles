@@ -1,8 +1,14 @@
 " ===
-" === 基本设置
+" === Basic
 " ===
-let mapleader="\<space>"
+set clipboard+=unnamedplus
 set nocompatible
+
+" ===
+" === Map
+" ===
+
+let mapleader="\<space>"
 
 " ===
 " === 插件
