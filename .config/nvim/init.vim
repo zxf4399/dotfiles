@@ -57,6 +57,7 @@ Plug 'voldikss/vim-floaterm'
 " ===
 
 Plug 'rhysd/accelerated-jk'
+Plug 'jiangmiao/auto-pairs'
 
 " ===
 " === Git
@@ -64,6 +65,12 @@ Plug 'rhysd/accelerated-jk'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+
+" ===
+" === Markdown
+" ===
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install'  }
 
 call plug#end()
 
