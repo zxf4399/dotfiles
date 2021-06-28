@@ -18,9 +18,11 @@ tnoremap <Esc> <C-\><C-n>
 call plug#begin('~/.config/nvim/plugged')
 
 " ===
-" === 配色
+" === Color scheme
 " ===
 Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " ===
 " === 代码补全
@@ -56,10 +58,17 @@ Plug 'voldikss/vim-floaterm'
 
 Plug 'rhysd/accelerated-jk'
 
+" ===
+" === Git
+" ===
+
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 " ===
-" === 配色
+" === Color scheme
 " ===
 set background=dark
 colorscheme gruvbox
