@@ -1,14 +1,16 @@
 " ===
-" === Basic
+" === Basic settings
 " ===
 set clipboard+=unnamedplus
 set nocompatible
 
 " ===
-" === Map
+" === Basic mappings
 " ===
 
 let mapleader="\<space>"
+
+tnoremap <Esc> <C-\><C-n>
 
 " ===
 " === 插件
@@ -42,6 +44,18 @@ Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mhinz/vim-startify'
 
+" ===
+" === Terminal
+" ===
+
+Plug 'voldikss/vim-floaterm'
+
+" ===
+" === Productivity
+" ===
+
+Plug 'rhysd/accelerated-jk'
+
 call plug#end()
 
 " ===
@@ -73,3 +87,10 @@ nmap <leader>e :CocCommand explorer<CR>
 " ===
 
 let g:vue_pre_processors = 'detect_on_enter'
+
+" ===
+" === accelerated-jk
+" ===
+
+nmap <silent> j <Plug>(accelerated_jk_gj)
+nmap <silent> k <Plug>(accelerated_jk_gk)
