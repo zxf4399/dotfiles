@@ -26,9 +26,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " ===
-" === 代码补全
+" === Code completion
 " ===
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dsznajder/vscode-es7-javascript-react-snippets', {
+      \ 'do': 'yarn install --frozen-lockfile && yarn compile' }
 
 " ===
 " === 语言包
@@ -72,6 +74,12 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install'  }
 
+" ===
+" === Interface
+" ===
+
+Plug 'simeji/winresizer'
+
 call plug#end()
 
 " ===
@@ -88,6 +96,7 @@ let g:coc_global_extensions =[
     \ 'coc-explorer',
     \ 'coc-json',
     \ 'coc-pairs',
+    \ 'coc-snippets',
     \ 'coc-tsserver',
     \ 'coc-tabnine',
     \ 'coc-yank',
