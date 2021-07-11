@@ -19,6 +19,13 @@ tnoremap <Esc> <C-\><C-n>
 call plug#begin('~/.config/nvim/plugged')
 
 " ===
+" === Fuzzy Search
+" ===
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" ===
 " === Color scheme
 " ===
 Plug 'morhetz/gruvbox'
@@ -175,3 +182,10 @@ let g:vue_pre_processors = 'detect_on_enter'
 
 nmap <silent> j <Plug>(accelerated_jk_gj)
 nmap <silent> k <Plug>(accelerated_jk_gk)
+
+" ===
+" === vim-prettier
+" ===
+
+" when running at every change you may want to disable quickfix
+autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
