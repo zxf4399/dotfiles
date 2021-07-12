@@ -87,6 +87,12 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install'  }
 
 Plug 'simeji/winresizer'
 
+" ===
+" === Tool
+" ===
+
+Plug 'romainl/vim-cool'
+
 call plug#end()
 
 " ===
@@ -189,3 +195,17 @@ nmap <silent> k <Plug>(accelerated_jk_gk)
 
 " when running at every change you may want to disable quickfix
 autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
+
+" ===
+" === fzf.vim
+" ===
+
+command! -bang -nargs=* Rg
+    \ call fzf#vim#grep('rg --column --line-number --no-heading --color=always --smart-case '
+    \ . (len(<q-args>) > 0 ? <q-args> : '""'), 0,
+    \ fzf#vim#with_preview({'options': ['--delimiter=:', '--nth=2..', '--info=inline']}), <bang>0)
+
+nnoremap <silent> <Leader>F :Files<CR>
+nnoremap <silent> <Leader>C :Colors<CR>
+nnoremap <silent> <Leader>B :Buffers<CR>
+nnoremap <silent> <Leader>L :Lines<CR>
