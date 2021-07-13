@@ -1,9 +1,12 @@
 " ===
 " === Basic settings
 " ===
+
 set clipboard+=unnamedplus
+set ignorecase
 set number
 set nocompatible
+set smartcase
 
 " ===
 " === Basic mappings
@@ -28,25 +31,35 @@ Plug 'junegunn/fzf.vim'
 " ===
 " === Color scheme
 " ===
+
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " ===
-" === Code completion
+" === Snippets
 " ===
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'honza/vim-snippets'
 Plug 'dsznajder/vscode-es7-javascript-react-snippets', {
       \ 'do': 'yarn install --frozen-lockfile && yarn compile' }
 
 " ===
+" === Code completion
+" ===
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" ===
 " === 语言包
 " ===
+
 Plug 'sheerun/vim-polyglot'
 
 " ===
 " === 代码格式化
 " ===
+
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 " ===
@@ -67,6 +80,12 @@ Plug 'voldikss/vim-floaterm'
 " ===
 
 Plug 'rhysd/accelerated-jk'
+Plug 'romainl/vim-cool'
+Plug 'vim-scripts/BufOnly.vim'
+Plug 'simeji/winresizer'
+Plug 'tpope/vim-surround'
+Plug 'easymotion/vim-easymotion'
+Plug 'Konfekt/FastFold'
 
 " ===
 " === Git
@@ -80,18 +99,35 @@ Plug 'tpope/vim-fugitive'
 " ===
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install'  }
+Plug 'mzlogin/vim-markdown-toc'
 
 " ===
-" === Interface
+" === Doc
 " ===
 
-Plug 'simeji/winresizer'
+Plug 'yianwillis/vimcdoc'
 
 " ===
-" === Tool
+" === Web develop
 " ===
 
-Plug 'romainl/vim-cool'
+Plug 'alvan/vim-closetag'
+Plug 'liuchengxu/vista.vim'
+
+" ===
+" === Window
+" ===
+
+Plug 't9md/vim-choosewin'
+
+" ===
+" === Editor
+" ===
+
+Plug 'ryanoasis/vim-devicons'
+Plug 'preservim/nerdcommenter'
+Plug 'mg979/vim-visual-multi'
+Plug 'farmergreg/vim-lastplace'
 
 call plug#end()
 
