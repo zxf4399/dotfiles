@@ -38,7 +38,9 @@ require("lazy").setup({
 vim.cmd.colorscheme("dracula")
 
 require('lualine').setup {
-	sections = { lualine_a = { 'mode', 'g:coc_status' } }
+	sections = { lualine_a = { {
+		'mode', fmt = function(mode) return mode:sub(1, 1) end
+	}, 'g:coc_status' } }
 }
 
 -- coc.nvim
