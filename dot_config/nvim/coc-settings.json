@@ -1,0 +1,6 @@
+{
+  "coc.preferences.formatOnSave": true,
+  "explorer.icon.enableNerdfont": true,
+  "npm.binPath": "yarn",
+  "Lua.diagnostics.globals": ["vim"]
+}
