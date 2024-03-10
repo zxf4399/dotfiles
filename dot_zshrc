@@ -101,5 +101,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # brew
-## set $PATH to use homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+# bun completions
+[ -s "/Users/peter.zheng/.bun/_bun" ] && source "/Users/peter.zheng/.bun/_bun"
